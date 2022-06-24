@@ -18,16 +18,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-// import DashBoard from '../DashBoard/DashBoard';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
-
-
 import HomeIcon from '@mui/icons-material/Home';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import LoginIcon from '@mui/icons-material/Login';
@@ -178,9 +174,6 @@ export default function SideBar() {
           >
             <MenuIcon />
           </IconButton>
-          {/* <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
-          </Typography> */}
           <Search style={{border:"1px solid black" , borderRadius:"25px" , width:"30%"}}>
             <SearchIconWrapper>
               <SearchIcon />
@@ -190,7 +183,6 @@ export default function SideBar() {
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
-          {/* <Box sx={{ display: { xs: 'none', md: 'flex' } }}> */}
           <IconButton
               size="large"
               edge="end"
@@ -240,7 +232,6 @@ export default function SideBar() {
             >
               <AccountCircleIcon style={{fontSize:"xxx-large"}}/>
             </IconButton>
-          {/* </Box> */}
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} >
@@ -339,7 +330,6 @@ export default function SideBar() {
       </Drawer>
       <Box component="main">
         <DrawerHeader />
-       {/* <DashBoard/> */}
       </Box>
     </Box>
   );

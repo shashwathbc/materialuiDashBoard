@@ -1,4 +1,3 @@
-// ** MUI Imports
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import { styled } from '@mui/material/styles'
@@ -89,7 +88,7 @@ const withdrawData = [
     amount: '-$21',
     title: 'AWS Account',
     logo: 'https://png.pngtree.com/element_our/20190531/ourmid/pngtree-shopping-cart-convenient-icon-image_1287807.jpg',
-    subtitle: 'Choosing a Cloud Platform'
+    subtitle: 'Cloud Platform'
   }
 ]
 
@@ -106,23 +105,19 @@ const Divider = styled(MuiDivider)(({ theme }) => ({
 
 const  SixthCard= () => {
   return (
-    <Card sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: ['column', 'column', 'row'] }}>
+    <Card sx={{ display: 'flex', justifyContent: 'space-between' }}>
       <Box sx={{ width: '100%' }}>
         <CardHeader
           title='Deposit'
-          sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
-          titleTypographyProps={{
-            variant: 'h6',
-            sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
-          }}
+
         />
-        <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
+        <CardContent>
           {depositData.map((item, index) => {
             return (
               <Box
                 key={item.title}
-                sx={{ display: 'flex', alignItems: 'center', mb: index !== depositData.length - 1 ? 6 : 0 }}
+                sx={{ display: 'flex', alignItems: 'center', paddingTop:'40px'}}
               >
                 <Box sx={{ minWidth: 38, display: 'flex', justifyContent: 'center' }}>
                   <img src={item.logo} alt={item.title} width={item.logoWidth} height={item.logoHeight} />
@@ -138,7 +133,7 @@ const  SixthCard= () => {
                   }}
                 >
                   <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>
-                    <Typography sx={{ fontWeight: 600, fontSize: '0.875rem' }}>{item.title}</Typography>
+                    <Typography sx={{ fontWeight: 600, fontSize: '14px' }}>{item.title}</Typography>
                     <Typography variant='caption'>{item.subtitle}</Typography>
                   </Box>
                   <Typography variant='subtitle2' sx={{ fontWeight: 600, color: 'success.main' }}>
@@ -156,19 +151,14 @@ const  SixthCard= () => {
       <Box sx={{ width: '100%' }}>
         <CardHeader
           title='Withdraw'
-          sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
-          titleTypographyProps={{
-            variant: 'h6',
-            sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
-          }}
         />
-        <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
+        <CardContent>
           {withdrawData.map((item, index) => {
             return (
               <Box
                 key={item.title}
-                sx={{ display: 'flex', alignItems: 'center', mb: index !== depositData.length - 1 ? 6 : 0 }}
+                sx={{ display: 'flex', alignItems: 'center' ,paddingTop:'40px'}}
               >
                 <Box sx={{ minWidth: 36, display: 'flex', justifyContent: 'center' }}>
                   <img src={item.logo} alt={item.title} width={item.logoWidth} height={item.logoHeight} />
@@ -184,7 +174,7 @@ const  SixthCard= () => {
                   }}
                 >
                   <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>
-                    <Typography sx={{ fontWeight: 600, fontSize: '0.875rem' }}>{item.title}</Typography>
+                    <Typography sx={{ fontWeight: 600, fontSize: '13px' }}>{item.title}</Typography>
                     <Typography variant='caption'>{item.subtitle}</Typography>
                   </Box>
                   <Typography variant='subtitle2' sx={{ fontWeight: 600, color: 'error.main' }}>

@@ -1,4 +1,3 @@
-// ** MUI Imports
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
@@ -7,8 +6,6 @@ import CardHeader from '@mui/material/CardHeader'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
-
-// ** Icons Imports
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import SettingsCellOutlinedIcon from '@mui/icons-material/SettingsCellOutlined';
@@ -72,28 +69,16 @@ const SecondCard = () => {
     <Card>
       <CardHeader
         title='Statistics Card'
-        action={
-          <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
-            <oreVertOutlinedIcon />
-          </IconButton>
-        }
         subheader={
           <Typography variant='body2'>
             <Box component='span' sx={{ fontWeight: 600, color: 'text.primary' }}>
               Total 48.5% growth
-            </Box>{' '}
+            </Box>
             😎 this month
           </Typography>
         }
-        titleTypographyProps={{
-          sx: {
-            mb: 2.5,
-            lineHeight: '2rem !important',
-            letterSpacing: '0.15px !important'
-          }
-        }}
       />
-      <CardContent sx={{ pt: theme => `${theme.spacing(3)} !important` }}>
+      <CardContent sx={{ pt: theme => `${theme.spacing(7)} !important` }}>
         <Grid container spacing={[5, 0]}>
           {renderStats()}
         </Grid>

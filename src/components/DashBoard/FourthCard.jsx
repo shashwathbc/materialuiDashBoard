@@ -1,4 +1,3 @@
-// ** MUI Imports
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import Avatar from '@mui/material/Avatar'
@@ -7,8 +6,6 @@ import IconButton from '@mui/material/IconButton'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 import LinearProgress from '@mui/material/LinearProgress'
-
-// ** Icons Imports
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 
@@ -47,14 +44,13 @@ const FourthCard = () => {
     <Card style={{display:"flex" , marginLeft:"100px" , alignItems:"center" , justifyContent:"center" , flexDirection:"column"}}>
       <CardHeader
         title='Total Earning'
-        titleTypographyProps={{ sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' } }}
         action={
-          <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
+          <IconButton>
             <MoreVertOutlinedIcon />
           </IconButton>
         }
       />
-      <CardContent sx={{ pt: theme => `${theme.spacing(2.25)} !important` }}>
+      <CardContent>
         <Box sx={{ mb: 1.5, display: 'flex', alignItems: 'center' }}>
           <Typography variant='h4' sx={{ fontWeight: 600, fontSize: '2.125rem !important' }}>
             $24,895
@@ -77,8 +73,8 @@ const FourthCard = () => {
               key={item.title}
               sx={{
                 display: 'flex',
-                alignItems: 'center',
-                ...(index !== data.length - 1 ? { mb: 8.5 } : {})
+                alignItems:"center",
+                justifyContent: 'center'
               }}
             >
                <Avatar
@@ -87,7 +83,7 @@ const FourthCard = () => {
                   mr: 3,
                   width: 40,
                   height: 40,
-                  // backgroundColor: theme => `rgba(${}, 0.04)`
+                 
                 }}
               >
                 <img src={item.imgSrc} alt={item.title} height={item.imgHeight} />
@@ -99,7 +95,8 @@ const FourthCard = () => {
                   display: 'flex',
                   flexWrap: 'wrap',
                   alignItems: 'center',
-                  justifyContent: 'space-between'
+                  justifyContent: 'space-between',
+                  paddingTop:"50px"
                 }}
               >
                 <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>

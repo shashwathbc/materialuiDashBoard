@@ -1,4 +1,3 @@
-// ** MUI Imports
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import Avatar from '@mui/material/Avatar'
@@ -6,8 +5,6 @@ import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-
-// ** Icons Imports
 import ArrowDropUpOutlinedIcon from '@mui/icons-material/ArrowDropUpOutlined';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
@@ -62,16 +59,6 @@ const data = [
     trendNumber: '16.2%',
     avatarColor: 'error',
     trend: <ArrowDropUpOutlinedIcon sx={{ color: 'success.main', fontWeight: 600 }} />
-  },
-  {
-    sales: '42k',
-    title: '$45k',
-    trendDir: 'up',
-    avatarText: 'KO',
-    subtitle: 'Korea',
-    trendNumber: '16.2%',
-    avatarColor: 'error',
-    trend: <ArrowDropUpOutlinedIcon sx={{ color: 'success.main', fontWeight: 600 }} />
   }
 ]
 
@@ -80,14 +67,13 @@ const FifthCard = () => {
     <Card>
       <CardHeader
         title='Sales by Countries'
-        titleTypographyProps={{ sx: { lineHeight: '1.2 !important', letterSpacing: '0.31px !important' } }}
         action={
-          <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
+          <IconButton>
             <MoreVertOutlinedIcon  />
           </IconButton>
         }
       />
-      <CardContent sx={{ pt: theme => `${theme.spacing(2)} !important` }}>
+      <CardContent >
         {data.map((item, index) => {
           return (
             <Box
@@ -95,7 +81,8 @@ const FifthCard = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                ...(index !== data.length - 1 ? { mb: 5.875 } : {})
+                justifyContent:"space-between",
+                paddingTop:"37px"
               }}
             >
               <Avatar
@@ -104,7 +91,6 @@ const FifthCard = () => {
                   height: 38,
                   marginRight: 3,
                   fontSize: '1rem',
-                  color: 'common.white',
                   backgroundColor: `${item.avatarColor}.main`
                 }}
               >
@@ -120,16 +106,14 @@ const FifthCard = () => {
                   justifyContent: 'space-between'
                 }}
               >
-                <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>
+                <Box>
                   <Box sx={{ display: 'flex' }}>
-                    <Typography sx={{ mr: 0.5, fontWeight: 600, letterSpacing: '0.25px' }}>{item.title}</Typography>
+                    <Typography>{item.title}</Typography>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
                       {item.trend}
                       <Typography
                         variant='caption'
                         sx={{
-                          fontWeight: 600,
-                          lineHeight: 1.5,
                           color: item.trendDir === 'down' ? 'error.main' : 'success.main'
                         }}
                       >
@@ -137,16 +121,16 @@ const FifthCard = () => {
                       </Typography>
                     </Box>
                   </Box>
-                  <Typography variant='caption' sx={{ lineHeight: 1.5 }}>
+                  <Typography variant='caption'>
                     {item.subtitle}
                   </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', textAlign: 'end', flexDirection: 'column' }}>
-                  <Typography sx={{ fontWeight: 600, fontSize: '0.875rem', lineHeight: 1.72, letterSpacing: '0.22px' }}>
+                <Box>
+                  <Typography>
                     {item.sales}
                   </Typography>
-                  <Typography variant='caption' sx={{ lineHeight: 1.5 }}>
+                  <Typography variant='caption'>
                     Sales
                   </Typography>
                 </Box>
