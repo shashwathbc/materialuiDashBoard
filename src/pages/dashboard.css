@@ -1,0 +1,33 @@
+.containerFirst{
+    display: flex;   
+    margin-left: 22%;
+    margin-top: 20px; 
+}
+
+.containerLast{
+    width: 75%;
+    margin-left: 22%;
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}
+
+.second{
+    margin-left: 110px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .containerFirst {
+      display: flex;
+      flex-direction: column;
+    }
+    .second{
+        margin-left: 0;
+    }
+    .second2{
+        width: 100%;
+        margin-right: 50%;
+    }
+  }
